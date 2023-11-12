@@ -1,0 +1,8 @@
+<?php
+   public function dispdata(){
+	   
+	   $result['data']=$this->Hello_Model->display_records();
+	   $this->load->view('display_records',$result);
+	
+   }
+?>

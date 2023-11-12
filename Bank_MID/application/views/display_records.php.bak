@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Display Records</title>
+</head>
+<table width="600" border="1" cellspacing="5" cellpadding="5">
+<tr style="background:#CCC">
+<th>ID</th>
+<th>Bank Name</th>
+<th>Branch</th>
+<th>Ac Number</th>
+</tr>
+
+<?php
+$i=1;
+foreach($data as $row)
+{
+	echo "<tr>";
+	echo "<td>".$i."</td>";
+	echo "<td>".$row->bname."</td>";
+	echo "<td>".$row->branch."</td>";
+	echo "<td>".$row->acnumber."</td>";
+	echo "<td><a href='deletedata?id=".$row->Id."'>Delete</a></td>";
+	echo"</tr>";
+	$i++;	
+}
+
+
+?>
+
+</table>
+</body>
+</html>

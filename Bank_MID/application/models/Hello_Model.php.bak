@@ -1,0 +1,33 @@
+<?php
+class Hello_Model extends CI_Model
+{
+	function saverecords($bname,$branch,$acnumber)
+	{
+		$query="insert into bankdetail values('','$bname','$branch','$acnumber')";
+		$this->db->query($query);
+	}
+	
+	function displayrecords()
+  {
+	  $query=$this->db->query("select * from bankdetail");
+	  return $query->result();
+  }
+  
+  function deleterecords($id)
+  {
+	  $this->db->query("delete from bankdetail where Id='".$id."'");
+  }
+  
+  function updaterecords($bname,$branch,$acnumber,$id)
+  {
+	  $query=$this->db->query("update bankdetail SET bname='$bname',branch='$branch',acnumber='$acnumber' where Id='".$id."'");
+  }
+  
+    function displayrecordsById($id) {
+        
+       $query = $this->db->get_where('bankdetail', array('id' => $id));
+        return $query->row_array();
+    }
+
+}
+?>

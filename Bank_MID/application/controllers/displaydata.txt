@@ -1,0 +1,23 @@
+a) Integrity: In the context of information security, integrity refers to the assurance that data has not been altered, tampered with, or corrupted during its creation, storage, transmission, or processing. Maintaining data integrity ensures that information remains accurate and reliable, and that unauthorized modifications are detected and prevented.
+
+b) Method in Cryptography to Ensure Integrity:
+
+One of the primary methods in cryptography to ensure the integrity of communication is through the use of cryptographic hash functions. A cryptographic hash function is a mathematical algorithm that takes an input (or "message") and returns a fixed-size string of characters, which is typically a hexadecimal number. These hash values are unique to the input data, meaning that even a slight change in the input will produce a significantly different hash value.
+
+A common cryptographic hash function used for ensuring integrity is SHA-256 (part of the SHA-2 family). Other hash functions, such as SHA-3 or MD5, can also be used depending on the specific security requirements.
+
+c) Checking Integrity Using Cryptographic Hash Functions:
+
+To check the integrity of communication using cryptographic hash functions in the context of the British Monarchy's confidential communication, follow these steps:
+
+Message Digest Generation: When a message is created or transmitted, generate a hash value (message digest) of the message content using the chosen cryptographic hash function (e.g., SHA-256).
+
+Secure Transmission: Ensure that both the message and the corresponding hash value are securely transmitted to the recipient. This may involve encryption to protect the confidentiality of the data and integrity of the hash.
+
+Recipient Verification: Upon receiving the message and its associated hash value, the recipient calculates a new hash value of the received message using the same cryptographic hash function.
+
+Comparison: The recipient compares the newly calculated hash value with the hash value received along with the message. If the two hash values match, it indicates that the message's integrity remains intact, and the data has not been altered during transit.
+
+Detection of Tampering: If the hash values do not match, it indicates potential tampering, and the recipient should treat the message as compromised. The recipient may reject the message, request a retransmission, or take other appropriate security measures to address the integrity breach.
+
+In this way, cryptographic hash functions provide a reliable method to verify the integrity of communications within the British Monarchy, helping to ensure that sensitive information remains unaltered and trustworthy throughout its transmission and storage.
